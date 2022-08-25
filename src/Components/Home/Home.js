@@ -2,9 +2,9 @@ import weeklyPostlist from "../../weeklyPosts.json";
 import designPostlist from "../../designPost.json";
 import tutorialPostlist from "../../tutorialPost.json";
 const Home = () => {
-  const designTools = designPostlist.slice(0, 3);
-  const weeklyUpdates = weeklyPostlist.slice(0, 3);
-  const tutorials = tutorialPostlist.slice(0, 3);
+  const designTools = designPostlist.slice(-3);
+  const weeklyUpdates = weeklyPostlist.slice(-3);
+  const tutorials = tutorialPostlist.slice(-3);
 
   return (
     <div className="Home-hero-container">

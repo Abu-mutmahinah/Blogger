@@ -1,11 +1,19 @@
+import { useState } from "react";
 import designPostlist from "../../designPost.json";
+
 const DesignTool = () => {
+  const [NoOfElements, setNoOfElements] = useState(3);
+  const slice = designPostlist.slice(0, NoOfElements);
+  const loadMore = () => {
+    setNoOfElements(NoOfElements + NoOfElements);
+  };
+
   return (
     <div className="Home-hero-container">
       {/* DESIGN TOOL */}
       <div className="Home-designTool-container">
         <h3 className="designTool-title">Design Tools</h3>
-        {designPostlist.map((item) => {
+        {slice.map((item) => {
           return (
             <div className="design-container" key={item.id}>
               <div>
@@ -22,6 +30,23 @@ const DesignTool = () => {
             </div>
           );
         })}
+      </div>
+
+      <div>
+        {NoOfElements >= designPostlist.length && (
+          <button className="mb-10 text-[#232e52] p-2 rounded">
+            {" "}
+            No Post left
+          </button>
+        )}
+        {NoOfElements < designPostlist.length && (
+          <button
+            className="mb-10 bg-[#232e52] text-white p-2 rounded"
+            onClick={() => loadMore()}
+          >
+            See More ...
+          </button>
+        )}
       </div>
     </div>
   );
