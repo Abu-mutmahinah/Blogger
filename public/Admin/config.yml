@@ -8,7 +8,7 @@ public_folder: "/Images"
 
 collections:
   - name: "Design Tools" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog Posts" # Used in the UI
+    label: "Design Posts" # Used in the UI
     folder: "MarkdownPart/designTools" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -19,8 +19,8 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "Weelky Update" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog Posts" # Used in the UI
+  - name: "Weekly Update" # Used in routes, e.g., /admin/collections/blog
+    label: "Weekly Posts" # Used in the UI
     folder: "MarkdownPart/weeklyContents" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -32,7 +32,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "Tutorials" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog Posts" # Used in the UI
+    label: "Tutorial Posts" # Used in the UI
     folder: "MarkdownPart/tutorials" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
