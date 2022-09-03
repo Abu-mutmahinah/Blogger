@@ -6,3 +6,5 @@ image: /Images/D-dinning-room.png
 ---
 
 _Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks._
+
+<img src="public/Images/D-dinning-room.png" alt=""/>

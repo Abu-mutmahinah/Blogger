@@ -20,7 +20,7 @@ const NavBar = ({ setHelloStatue, helloStatue }) => {
             {/* BLOG ANCHOR LINKS */}
             <div className="NavBar-Anchor-Links">
               <Link
-                to="weekly"
+                to="/weekly"
                 onClick={() => {
                   setHelloStatue("weekly");
                 }}
@@ -28,7 +28,7 @@ const NavBar = ({ setHelloStatue, helloStatue }) => {
                 Weekly Updates
               </Link>
               <Link
-                to="design"
+                to="/design"
                 onClick={() => {
                   setHelloStatue("design");
                 }}
@@ -37,7 +37,7 @@ const NavBar = ({ setHelloStatue, helloStatue }) => {
               </Link>
 
               <Link
-                to="tutorial"
+                to="/tutorial"
                 onClick={() => {
                   setHelloStatue("tutorial");
                 }}
@@ -45,7 +45,7 @@ const NavBar = ({ setHelloStatue, helloStatue }) => {
                 Tutorials
               </Link>
               <Link
-                to="library"
+                to="/library"
                 onClick={() => {
                   setHelloStatue("library");
                 }}
@@ -73,10 +73,10 @@ const NavBar = ({ setHelloStatue, helloStatue }) => {
 
               <div>
                 {helloStatue === "tutorial" && (
-                  <div className="flex items-center gap-5">
+                  <div className="flex items-center gap-[1vw]">
                     <div className="tutorial-icon">
                       <Link
-                        to="design"
+                        to="/design"
                         onClick={() => {
                           setHelloStatue("design");
                         }}

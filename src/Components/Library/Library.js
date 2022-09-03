@@ -39,33 +39,39 @@ const book4 = [
 const Library = () => {
   return (
     <div>
-      <h1 className="h1 font-[900] text-2xl text-[#232e52] ml-[200px]">
+      <h1 className=" font-bold text-2xl text-[#232e52] ml-[14vw] mt-10 text-[2vw]">
         Books I've read
       </h1>
       {/* 2020 books */}
       <div>
-        <h2 className="text-[#232e52] ml-[200px] font-[900] mt-5">2020</h2>
-        <div className="flex flex-wrap justify-center gap-10 mt-5">
+        <h2 className="text-[#232e52] ml-[14vw] font-[900] mt-5">2020</h2>
+        <div className="flex flex-wrap justify-center gap-[4vw] mt-5">
           {book1.map((item) => {
-            return <img src={item.img} key={item.id} alt="" />;
+            return (
+              <img src={item.img} key={item.id} alt="" className="h-[20vw]" />
+            );
           })}
         </div>
       </div>
       {/* 2019 books */}
       <div>
-        <h2 className="text-[#232e52] ml-[200px] font-[900] mt-20">2019</h2>
-        <div className="flex flex-wrap justify-center gap-10 mt-5">
+        <h2 className="text-[#232e52] ml-[14vw] font-[900] mt-20">2019</h2>
+        <div className="flex flex-wrap justify-center gap-[4vw] mt-5">
           {book2.map((item) => {
-            return <img src={item.img} key={item.id} alt="" />;
+            return (
+              <img src={item.img} key={item.id} alt="" className="h-[20vw]" />
+            );
           })}
         </div>
       </div>
       {/* 2018 books */}
       <div className="">
-        <h2 className="text-[#232e52] ml-[200px] font-[900] mt-20">2018</h2>
-        <div className="flex flex-wrap justify-start ml-[190px] gap-10 mt-5">
+        <h2 className="text-[#232e52] ml-[14vw] font-[900] mt-20">2018</h2>
+        <div className="flex flex-wrap justify-start ml-[12.5vw] gap-[4vw] mt-5">
           {book3.map((item) => {
-            return <img src={item.img} key={item.id} alt="" />;
+            return (
+              <img src={item.img} key={item.id} alt="" className="h-[20vw]" />
+            );
           })}
         </div>
       </div>
@@ -73,10 +79,12 @@ const Library = () => {
       {/* 2017 books */}
 
       <div className="">
-        <h2 className="text-[#232e52] ml-[200px] font-[900] mt-20">2018</h2>
-        <div className="flex flex-wrap justify-start ml-[190px] gap-10 mt-5">
+        <h2 className="text-[#232e52] ml-[14vw] font-[900] mt-20">2017</h2>
+        <div className="flex flex-wrap justify-start ml-[13vw] gap-[4vw] mt-5">
           {book4.map((item) => {
-            return <img src={item.img} key={item.id} alt="" />;
+            return (
+              <img src={item.img} key={item.id} alt="" className="h-[20vw]" />
+            );
           })}
         </div>
       </div>

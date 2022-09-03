@@ -1,6 +1,8 @@
 import weeklyPostlist from "../../weeklyPosts.json";
 import designPostlist from "../../designPost.json";
 import tutorialPostlist from "../../tutorialPost.json";
+import { Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 const Home = () => {
   const designTools = designPostlist.slice(-3);
   const weeklyUpdates = weeklyPostlist.slice(-3);
@@ -19,11 +21,17 @@ const Home = () => {
                   <p className="design-badge">{item.title}</p>
                   <p className="design-date">{item.date} </p>
                 </div>
-                <h1 className="design-title">{item.heading}</h1>
-                <p className="design-desc">{item.content}</p>
+                <Link to={`design/${item.id}`}>
+                  <h1 className="design-title">{item.heading}</h1>
+                  <p className="design-desc">
+                    <ReactMarkdown children={item.content} />
+                  </p>
+                </Link>
               </div>
               <div>
-                <img src={item.image} alt="" className="h-[180px]" />
+                <Link to={`design/${item.id}`}>
+                  <img src={item.image} alt="" className="h-[13vw]" />
+                </Link>
               </div>
             </div>
           );
@@ -42,11 +50,15 @@ const Home = () => {
                   <p className="design-badge">{item.title}</p>
                   <p className="design-date"> {item.date} </p>
                 </div>
-                <h1 className="design-title">{item.heading}</h1>
-                <p className="design-desc">{item.content}</p>
+                <Link to={`weekly/${item.id}`}>
+                  <h1 className="design-title">{item.heading}</h1>
+                  <p className="design-desc">{item.content}</p>
+                </Link>
               </div>
               <div>
-                <img src={item.image} alt="" className="h-[180px]" />
+                <Link to={`weekly/${item.id}`}>
+                  <img src={item.image} alt="" className="h-[13vw]" />
+                </Link>
               </div>
             </div>
           );
@@ -64,11 +76,15 @@ const Home = () => {
                   <p className="design-badge">{item.title}</p>
                   <p className="design-date">{item.date} </p>
                 </div>
-                <h1 className="design-title">{item.heading}</h1>
-                <p className="design-desc">{item.content}</p>
+                <Link to={`tutorial/${item.id}`}>
+                  <h1 className="design-title">{item.heading}</h1>
+                  <p className="design-desc">{item.content}</p>
+                </Link>
               </div>
               <div>
-                <img src={item.image} alt="" className="h-[180px]" />
+                <Link to={`tutorial/${item.id}`}>
+                  <img src={item.image} alt="" className="h-[13vw]" />
+                </Link>
               </div>
             </div>
           );
