@@ -14,8 +14,8 @@ const Tutorial = () => {
 
   return (
     <div className="w-[100%]">
-      <div className="px-[30px]">
-        <img src={flag} alt="" />
+      <div className="flex justify-center items-center">
+        <img src={flag} alt="" className="flagImg" />
       </div>
       <TextPart />
       <div className="Home-hero-container">
@@ -37,7 +37,7 @@ const Tutorial = () => {
                 <div className="flex justify-center items-center ">
                   <div className="flex justify-center items-center">
                     <Link to={`/tutorial/${item.id}`}>
-                      <img src={item.image} alt="" className="h-[13vw] " />
+                      <img src={item.image} alt="" className="desingImg " />
                     </Link>
                   </div>
                 </div>

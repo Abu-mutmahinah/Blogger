@@ -14,6 +14,9 @@ body {
   box-sizing: border-box;
   font-family: Graphik2;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* NAVBAR SECTION STYLING */
 
@@ -84,7 +87,9 @@ body {
   background: rgba(255, 255, 255, 0.1);
   max-width: fit-content;
 }
-
+.flagImg {
+  width: 94vw;
+}
 .t-logo {
   font-family: Graphik;
   border: 0.1vw solid #ffff;
@@ -103,6 +108,26 @@ body {
   color: #232e52;
   font-weight: 700;
   font-size: 0.9vw;
+}
+.t-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  align-items: center;
+  font-size: 1.2vw;
+  color: #232e52;
+  width: 50%;
+}
+.t-design-cont {
+  width: 60%;
+}
+.t-design {
+  background: rgba(128, 128, 128, 0.144);
+  padding: 4vw;
+  border-radius: 0vw 0vw 0vw 0vw;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: rgba(59, 58, 58, 0.822);
 }
 .library-subtitle {
   font: Graphik;
@@ -179,6 +204,11 @@ body {
   margin-top: 10px;
   color: #232e52;
   font-weight: 400;
+}
+.desingImg {
+  height: 14vw;
+  width: 18vw;
+  border-radius: 1vw;
 }
 .h1 {
   font-family: Graphik;
@@ -258,4 +288,284 @@ input {
   margin-top: 80px;
   font-weight: 500;
   color: #232e52;
+}
+
+@media screen and (max-width: 767px) {
+  /* NAVBAR SECTION STYLING */
+
+  .NavBar-Hero {
+    width: 100%;
+    padding: 5px 5px 0px 5px;
+  }
+  .NavBar-Container {
+    background: #232e52;
+    border-radius: 1vw;
+    padding: 2.1vw 3vw;
+  }
+  .NavBar-Links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #ffff;
+  }
+  .NavBar-Logo {
+    font-size: 2.7vw;
+    font-weight: bolder;
+    cursor: pointer;
+    font-family: Graphik;
+  }
+  .NavBar-Anchor-Links {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    font-size: 1.5vw;
+    font-weight: 400;
+    font: Graphik;
+  }
+
+  .NavBar-subcribe-button {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 0.9vw 1vw;
+    font-weight: 600;
+    font-size: 1.8vw;
+    font-family: Graphik;
+  }
+
+  /* NAVBAR TITLE STYLING */
+  .NavBar-Title {
+    margin-top: 4vw;
+    margin-left: 5vw;
+    color: #ffff;
+  }
+  .NavBar-Title-Hello {
+    font-family: Graphik;
+    font-weight: 600;
+    font-size: 1.8vw;
+  }
+
+  .NavBar-Title-designtool {
+    border: 1px solid #ffff;
+    border-radius: 5px;
+    max-width: fit-content;
+    padding: 0.4vw 0.4vw;
+    font-size: 1.5vw;
+    font: Graphik;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .tutorial-icon {
+    border-radius: 50%;
+    padding: 1vw 1.4vw;
+    background: rgba(255, 255, 255, 0.1);
+    max-width: fit-content;
+  }
+
+  .flagImg {
+    width: 96vw;
+  }
+
+  .t-logo {
+    font-family: Graphik;
+    border: 0.1vw solid #ffff;
+    padding: 0.3vw 0.5vw;
+    text-transform: uppercase;
+    border-radius: 0.5vw 0vw 0vw 0.5vw;
+    font-weight: 600;
+    font-size: 1.4vw;
+  }
+  .t-date {
+    font-family: Graphik;
+    background: #ffff;
+    padding: 0.5vw 0.5vw;
+    text-transform: uppercase;
+    border-radius: 0vw 0.5vw 0.5vw 0vw;
+    color: #232e52;
+    font-weight: 700;
+    font-size: 1.4vw;
+  }
+
+  .t-text {
+    display: flex;
+    flex-direction: column;
+    column-gap: normal;
+    align-items: center;
+    font-size: 2.3vw;
+    color: #232e52;
+    width: 90%;
+  }
+  .t-design-cont {
+    width: 90%;
+  }
+  .t-design {
+    background: rgba(128, 128, 128, 0.144);
+    padding: 4vw;
+    border-radius: 0vw 0vw 0vw 0vw;
+    font-weight: bold;
+    font-size: 2.4vw;
+    color: rgba(59, 58, 58, 0.822);
+  }
+  .library-subtitle {
+    font: Graphik;
+    font-size: 1.9vw;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.795);
+  }
+  .NavBar-Main-Title {
+    margin-top: 1vw;
+    font-family: Graphik;
+    width: 80vw;
+    padding-bottom: 0.7vw;
+    font-size: 3vw;
+    font-weight: 500;
+  }
+
+  /* HOME SECTION STYLING */
+  .Home-hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #232e52;
+    margin-top: 5vw;
+  }
+
+  .designTool-title {
+    font-size: 3vw;
+    font-family: Graphik;
+    font-weight: bolder;
+    color: #232e52;
+    margin-bottom: 4vw;
+  }
+  .design-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vw;
+  }
+  .design-date-container {
+    display: flex;
+    align-items: center;
+    font-size: 1.5vw;
+    justify-content: space-between;
+    width: fit-content;
+    font-weight: 600;
+    font: Graphik;
+    margin-bottom: 1.2vw;
+  }
+  .design-badge {
+    font-family: Graphik;
+    color: #232e52;
+    background: #ebf2fe;
+    padding: 0.5vw 0.5vw;
+    border-radius: 6px 0px 0px 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .design-title {
+    width: 55vw;
+    font-family: Graphik;
+    font-weight: 900;
+    font-size: 2.3vw;
+    color: #232e52;
+    line-height: 3.3vw;
+  }
+  .design-date {
+    font-weight: 700;
+    font: Graphik;
+  }
+  .design-desc {
+    font: Graphik;
+    width: 50.5vw;
+    font-size: 1.7vw;
+    margin-top: 10px;
+    color: #232e52;
+    font-weight: 400;
+  }
+
+  .desingImg {
+    height: 19vw;
+    width: 26vw;
+    border-radius: 1vw;
+  }
+  .h1 {
+    font-family: Graphik;
+    margin-top: 30px;
+  }
+
+  /* FOOTER SECTION STYLING */
+  .footer-hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vw;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 27vw;
+    width: 90%;
+    background: #232e52;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    font-family: Graphik;
+  }
+  .circle-container {
+    position: absolute;
+    top: -7vw;
+    left: -7vw;
+    height: 15vw;
+    width: 15vw;
+    border: 1.7vw solid rgb(247, 247, 84);
+    border-radius: 50%;
+  }
+  .footer-heading {
+    font-size: 4vw;
+    font-family: Graphik;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .footer-subheading {
+    font-family: Graphik2;
+    margin-top: 0.5vw;
+    font-size: 2.5vw;
+    color: #edfcf2de;
+  }
+
+  form {
+    margin-top: 3vw;
+    display: flex;
+    align-items: center;
+    font-family: Graphik2;
+  }
+  input {
+    background: #ffffff;
+    width: 32vw;
+    padding: 1vw 1vw 1vw 2jvw;
+    border-radius: 7px 0px 0px 7px;
+    font-size: 2vw;
+    outline: none;
+    color: rgba(17, 17, 24, 0.6);
+  }
+  .footer-button {
+    background: #8ceead;
+    padding: 1.2vw 1.1vw;
+    border-radius: 0vw 1vw 1vw 0vw;
+    font-size: 1.8vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #232e52;
+  }
+  .footer-copyright {
+    font-family: Graphik2;
+    font-size: 2vw;
+    margin-top: 7vw;
+    font-weight: 500;
+    color: #232e52;
+  }
 }

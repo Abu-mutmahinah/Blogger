@@ -32,7 +32,7 @@ const DesignTool = () => {
               </div>
               <div>
                 <Link to={`/design/${item.id}`}>
-                  <img src={item.image} alt="" className="h-[13vw]" />
+                  <img src={item.image} alt="" className="desingImg" />
                 </Link>
               </div>
             </div>

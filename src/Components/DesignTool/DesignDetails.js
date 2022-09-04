@@ -17,9 +17,11 @@ const DesignDetails = (props) => {
   const back = useHistory();
   return (
     <div className="flex flex-col justify-center text-center items-center px-2">
-      <h1 className="font-[900] text-2xl my-5">{fetchedPost.heading}</h1>
-      <img src={fetchedPost.image} alt="" className="w-[400px] mb-5" />
-      <p className="my-4 flex flex-col items-center">
+      <h1 className="font-[900] text-[2.5vw] w-[40vw] my-5 uppercase">
+        {fetchedPost.heading}
+      </h1>
+      <img src={fetchedPost.image} alt="" className="w-[30vw] mb-5" />
+      <p className="my-4 text-[1.5vw] w-[50vw]">
         <ReactMarkdown children={fetchedPost.content} />
       </p>
 

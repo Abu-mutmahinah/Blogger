@@ -1,6 +1,7 @@
 import weeklyPostlists from "../../weeklyPosts.json";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 
 const WeeklyUpdate = () => {
   const [NoOfElements, setNoOfElements] = useState(3);
@@ -24,12 +25,14 @@ const WeeklyUpdate = () => {
                   </div>
                   <Link to={`weekly/${item.id}`}>
                     <h1 className="design-title">{item.heading}</h1>
-                    <p className="design-desc">{item.content}</p>
+                    <p className="design-desc">
+                      <ReactMarkdown children={item.content} />
+                    </p>
                   </Link>
                 </div>
                 <div>
                   <Link to={`weekly/${item.id}`}>
-                    <img src={item.image} alt="" className="h-[13vw]" />
+                    <img src={item.image} alt="" className="desingImg" />
                   </Link>
                 </div>
               </div>

@@ -30,7 +30,7 @@ const Home = () => {
               </div>
               <div>
                 <Link to={`design/${item.id}`}>
-                  <img src={item.image} alt="" className="h-[13vw]" />
+                  <img src={item.image} alt="" className="desingImg" />
                 </Link>
               </div>
             </div>
@@ -52,12 +52,14 @@ const Home = () => {
                 </div>
                 <Link to={`weekly/${item.id}`}>
                   <h1 className="design-title">{item.heading}</h1>
-                  <p className="design-desc">{item.content}</p>
+                  <p className="design-desc">
+                    <ReactMarkdown children={item.content} />
+                  </p>
                 </Link>
               </div>
               <div>
                 <Link to={`weekly/${item.id}`}>
-                  <img src={item.image} alt="" className="h-[13vw]" />
+                  <img src={item.image} alt="" className="desingImg" />
                 </Link>
               </div>
             </div>
@@ -78,12 +80,14 @@ const Home = () => {
                 </div>
                 <Link to={`tutorial/${item.id}`}>
                   <h1 className="design-title">{item.heading}</h1>
-                  <p className="design-desc">{item.content}</p>
+                  <p className="design-desc">
+                    <ReactMarkdown children={item.content} />
+                  </p>
                 </Link>
               </div>
               <div>
                 <Link to={`tutorial/${item.id}`}>
-                  <img src={item.image} alt="" className="h-[13vw]" />
+                  <img src={item.image} alt="" className="desingImg" />
                 </Link>
               </div>
             </div>

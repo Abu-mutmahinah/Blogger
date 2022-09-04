@@ -5,7 +5,7 @@ const TextPart = () => {
     <div className="">
       <div>
         <div className="flex  justify-center items-center mt-10">
-          <div className="w-[50%] flex flex-col gap-5 text-[15px] text-[#232e52]">
+          <div className="t-text">
             <div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
@@ -36,10 +36,10 @@ const TextPart = () => {
           </div>
         </div>
         <div className="flex  justify-center mt-10">
-          <div>
-            <div className="w-[800px]">
+          <div className="flex flex-col items-center">
+            <div className="w-[90%]">
               <img src={manssion} alt="" className="" />
-              <p className="bg-gray-200 p-2 rounded-b-lg w-[780px] text-gray-600 text-[14px]">
+              <p className="bg-gray-200 p-2 rounded-b-lg  text-gray-600 text-[1.4vw]">
                 IMAGE CAPTION CREDIT
               </p>
             </div>
@@ -47,7 +47,7 @@ const TextPart = () => {
         </div>
 
         <div className="flex  justify-center items-center mt-10">
-          <div className="w-[50%] flex flex-col gap-5 text-[15px] text-[#232e52]">
+          <div className="t-text">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
               eum architecto dignissimos! Voluptate odio praesentium reiciendis
@@ -69,11 +69,11 @@ const TextPart = () => {
           </div>
         </div>
 
-        <div className="flex  justify-center mt-10">
-          <div>
-            <div className="w-[800px] ">
-              <div className="bg-blue-500 h-[5px] "></div>
-              <h3 className="bg-gray-200 p-[60px] rounded-b-lg font-bold text-[18px] text-gray-700">
+        <div className="mt-10">
+          <div className="flex  justify-center items-center">
+            <div className="t-design-cont ">
+              <div className="bg-blue-500 h-[0.5vw] rounded-t-lg "></div>
+              <h3 className="t-design">
                 Design comps, layout, wireframe--will your clients accept that
                 you go about thing the facile way ? authorities in our business
                 will tell in no uncertain terns that Lorem Ipsum is that huge,
@@ -84,7 +84,7 @@ const TextPart = () => {
         </div>
 
         <div className="flex  justify-center items-center mt-10">
-          <div className="w-[50%] flex flex-col gap-5 text-[15px] text-[#232e52]">
+          <div className="t-text">
             <p>
               Design comps, layout, wireframe--will your clients accept that you
               go about thing the facile way? authorities in our business will
