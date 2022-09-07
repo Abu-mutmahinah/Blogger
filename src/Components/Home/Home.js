@@ -1,19 +1,32 @@
 import weeklyPostlist from "../../weeklyPosts.json";
 import designPostlist from "../../designPost.json";
 import tutorialPostlist from "../../tutorialPost.json";
+import rehypeRaw from "rehype-raw";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+
 const Home = () => {
   const designTools = designPostlist.slice(-3);
   const weeklyUpdates = weeklyPostlist.slice(-3);
   const tutorials = tutorialPostlist.slice(-3);
 
+  // display only 14 words in the discription contents
+  const exceptList1 = designTools.map((post) => {
+    return post.content.split(" ").splice(0, 13).join(" ");
+  });
+
+  const exceptList2 = weeklyUpdates.map((post) => {
+    return post.content.split(" ").splice(0, 13).join(" ");
+  });
+  const exceptList3 = tutorials.map((post) => {
+    return post.content.split(" ").splice(0, 13).join(" ");
+  });
   return (
     <div className="Home-hero-container">
       {/* DESIGN TOOL */}
       <div className="Home-designTool-container">
         <h3 className="designTool-title">Design Tools</h3>
-        {designTools.map((item) => {
+        {designTools.map((item, i) => {
           return (
             <div className="design-container" key={item.id}>
               <div>
@@ -24,7 +37,10 @@ const Home = () => {
                 <Link to={`design/${item.id}`}>
                   <h1 className="design-title">{item.heading}</h1>
                   <p className="design-desc">
-                    <ReactMarkdown children={item.content} />
+                    <ReactMarkdown
+                      children={exceptList1[i]}
+                      rehypePlugins={[rehypeRaw]}
+                    />
                   </p>
                 </Link>
               </div>
@@ -42,7 +58,7 @@ const Home = () => {
 
       <div className="Home-designTool-container mt-5">
         <h3 className="designTool-title">Weekly Updates</h3>
-        {weeklyUpdates.map((item) => {
+        {weeklyUpdates.map((item, i) => {
           return (
             <div className="design-container" key={item.id}>
               <div>
@@ -53,7 +69,10 @@ const Home = () => {
                 <Link to={`weekly/${item.id}`}>
                   <h1 className="design-title">{item.heading}</h1>
                   <p className="design-desc">
-                    <ReactMarkdown children={item.content} />
+                    <ReactMarkdown
+                      children={exceptList2[i]}
+                      rehypePlugins={[rehypeRaw]}
+                    />
                   </p>
                 </Link>
               </div>
@@ -70,7 +89,7 @@ const Home = () => {
       {/* TUTORIAL */}
       <div className="Home-designTool-container mt-5">
         <h3 className="designTool-title">Tutorials</h3>
-        {tutorials.map((item) => {
+        {tutorials.map((item, i) => {
           return (
             <div className="design-container" key={item.id}>
               <div>
@@ -81,7 +100,10 @@ const Home = () => {
                 <Link to={`tutorial/${item.id}`}>
                   <h1 className="design-title">{item.heading}</h1>
                   <p className="design-desc">
-                    <ReactMarkdown children={item.content} />
+                    <ReactMarkdown
+                      children={exceptList3[i]}
+                      rehypePlugins={[rehypeRaw]}
+                    />
                   </p>
                 </Link>
               </div>

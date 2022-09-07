@@ -51,10 +51,9 @@ const getDesignPosts = () => {
           image: metedata.image ? metedata.image : "no image given",
         };
         tutorialPostlist.push(post);
-        if (i === files.length - 1) {
-          let data = JSON.stringify(tutorialPostlist);
-          fs.writeFileSync("src/tutorialPost.json", data);
-        }
+
+        let data = JSON.stringify(tutorialPostlist);
+        fs.writeFileSync("src/tutorialPost.json", data);
       });
     });
   });

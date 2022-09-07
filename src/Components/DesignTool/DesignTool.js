@@ -10,12 +10,17 @@ const DesignTool = () => {
     setNoOfElements(NoOfElements + NoOfElements);
   };
 
+  // display only 14 words in the discription contents
+  const exceptList = designPostlist.map((post) => {
+    return post.content.split(" ").splice(0, 13).join(" ");
+  });
+
   return (
     <div className="Home-hero-container">
       {/* DESIGN TOOL */}
       <div className="Home-designTool-container">
         <h3 className="designTool-title">Design Tools</h3>
-        {slice.map((item) => {
+        {slice.map((item, i) => {
           return (
             <div className="design-container" key={item.id}>
               <div>
@@ -26,7 +31,7 @@ const DesignTool = () => {
                 <Link to={`/design/${item.id}`}>
                   <h1 className="design-title">{item.heading}</h1>
                   <p className="design-desc">
-                    <ReactMarkdown children={item.content} />
+                    <ReactMarkdown children={exceptList[i]} skipHtml={false} />
                   </p>
                 </Link>
               </div>

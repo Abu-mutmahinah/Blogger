@@ -9,13 +9,18 @@ const WeeklyUpdate = () => {
   const loadMore = () => {
     setNoOfElements(NoOfElements + NoOfElements);
   };
+
+  // display only 14 words in the discription contents
+  const exceptList = weeklyPostlists.map((post) => {
+    return post.content.split(" ").splice(0, 13).join(" ");
+  });
   return (
     <div>
       <div className="Home-hero-container">
         {/* DESIGN TOOL */}
         <div className="Home-designTool-container">
           <h3 className="designTool-title">Weekly Update</h3>
-          {slice.map((item) => {
+          {slice.map((item, i) => {
             return (
               <div className="design-container" key={item.id}>
                 <div>
@@ -26,7 +31,7 @@ const WeeklyUpdate = () => {
                   <Link to={`weekly/${item.id}`}>
                     <h1 className="design-title">{item.heading}</h1>
                     <p className="design-desc">
-                      <ReactMarkdown children={item.content} />
+                      <ReactMarkdown children={exceptList[i]} />
                     </p>
                   </Link>
                 </div>

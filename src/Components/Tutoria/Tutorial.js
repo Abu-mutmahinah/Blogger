@@ -12,6 +12,10 @@ const Tutorial = () => {
     setNoOfElements(NoOfElements + NoOfElements);
   };
 
+  // display only 14 words in the discription contents
+  const exceptList = tutorialPostlist.map((post) => {
+    return post.content.split(" ").splice(0, 13).join(" ");
+  });
   return (
     <div className="w-[100%]">
       <div className="flex justify-center items-center">
@@ -21,7 +25,7 @@ const Tutorial = () => {
       <div className="Home-hero-container">
         <div className="Home-designTool-container mt-[70px]">
           <h3 className="designTool-title">Other intreresing posts</h3>
-          {slice.map((item) => {
+          {slice.map((item, i) => {
             return (
               <div className="design-container">
                 <div>
@@ -31,7 +35,7 @@ const Tutorial = () => {
                   </div>
                   <h1 className="design-title">{item.heading}</h1>
                   <div className="design-desc">
-                    <Markdown children={item.content} escape />
+                    <Markdown children={exceptList[i]} escape />
                   </div>
                 </div>
                 <div className="flex justify-center items-center ">
